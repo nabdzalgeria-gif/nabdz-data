@@ -1,68 +1,248 @@
+
 {
   "metadata": {
-    "title": "نبض الجزائر — البيانات المفتوحة (الإصدار 1.0)",
-    "title_en": "Nabdz Algeria — Open Data (v1.0)",
-    "source": "https://nabdz-algeria.blogspot.com",
-    "version": "1.0.0",
+    "title_ar": "البيانات المفتوحة - نبض الجزائر",
+    "title_en": "Nabdz Algeria Open Data",
+    "version": "1.0.1",
+    "previous_version": "1.0.0",
     "release_date": "2026-11-19",
     "last_updated": "2026-11-19",
     "status": "published",
-    "license": "CC BY 4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source": "https://nabdz-algeria.blogspot.com",
+    "repository": "https://github.com/nabdzalgeria-gif/nabdz-data",
+    "data_file": "https://raw.githubusercontent.com/nabdzalgeria-gif/nabdz-data/refs/heads/main/nabdz-data-v1.json",
+    "license": {
+      "name": "Creative Commons Attribution 4.0 International",
+      "identifier": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
     "creator": {
       "name": "علية حاتم",
       "organization": "نبض الجزائر",
       "email": "all09sajida@gmail.com"
     },
     "language": "ar",
-    "description": "مجموعة بيانات مفتوحة تحتوي على مرجع المقامات السبعة في MaqamAI، وفهرس البذرات المرجعية، وفهرس الفيديوهات المنشورة على قناة MaqamAI، وفهرس صفحات مدونة نبض الجزائر. جميع البيانات قابلة للتحقق ومصدرها الأساسي هو مدونة نبض الجزائر وقناة MaqamAI على يوتيوب.",
-    "citation": "@misc{nabdz2026data, author={علية حاتم}, title={نبض الجزائر — البيانات المفتوحة}, year={2026}, version={1.0.0}, url={https://nabdz-algeria.blogspot.com/p/open-data.html}}"
+    "description": "مجموعة بيانات مفتوحة توثق بعض المراجع والإعدادات والسجلات والفهارس المرتبطة بمشروع نبض الجزائر وMaqamAI. تتضمن بيانات مرجعية تصميمية، وبذرات مستخدمة أو تجريبية، وفهرساً لمقاطع فيديو وصفحات مختارة. تختلف قابلية التحقق من سجل إلى آخر، ولذلك لا يُعد نشر البيانات وحده دليلاً على التحقق المستقل من جميع محتوياتها.",
+    "citation": {
+      "format": "BibTeX",
+      "entry": "@misc{nabdz_algeria_open_data_2026, title={Nabdz Algeria Open Data}, author={Nabdz Algeria}, year={2026}, version={1.0.1}, url={https://github.com/nabdzalgeria-gif/nabdz-data}}"
+    },
+    "verification_status_guide": {
+      "verified_public": "تم التحقق من السجل بالاستناد إلى مصدر عام يمكن الوصول إليه.",
+      "verified_internal": "تم التحقق من السجل بالاستناد إلى وثائق أو ملفات داخلية للمشروع.",
+      "project_defined": "قيمة أو تصنيف وضعه المشروع لأغراضه التصميمية أو التشغيلية.",
+      "pending_external_check": "المعلومة مسجلة في المشروع، لكنها لم تخضع بعد للتحقق المستقل من مصدر خارجي.",
+      "test_record": "سجل تجريبي لا يمثل بالضرورة استخداماً منشوراً أو إنتاجياً.",
+      "historical_deleted": "سجل تاريخي لمحتوى كان منشوراً ثم حُذف."
+    }
   },
-
   "datasets": {
-
     "maqamat_reference": {
       "name": "مرجع المقامات السبعة في MaqamAI",
-      "name_en": "MaqamAI Seven Maqamat Reference",
-      "description": "جدول مرجعي يصف المقامات السبعة المستخدمة في أداة MaqamAI، مع الألوان (أكواد HEX) والدلالة الرمزية لكل مقام. هذا الجدول فريد ولا يوجد في أي مصدر آخر.",
-      "type": "FACT",
-      "confidence": "high",
-      "fields": ["id", "name_ar", "name_en", "emoji", "primary_color", "secondary_color", "accent_color", "symbolism"],
+      "description": "مرجع تصميمي داخلي يحدد أسماء المقامات السبعة والرموز والألوان والدلالات التعبيرية التي يعتمدها مشروع MaqamAI. تمثل الألوان والرموز والدلالات اختيارات تصميمية خاصة بالمشروع، ولا تُقدم بوصفها تصنيفاً موسيقياً معيارياً أو حقائق علمية عامة.",
+      "data_category": "REFERENCE_DATA",
+      "claim_type": "PROJECT_DEFINED",
+      "verification_status": "project_defined",
+      "fields": [
+        "id",
+        "name_ar",
+        "name_en",
+        "emoji",
+        "primary_color",
+        "secondary_color",
+        "accent_color",
+        "symbolism"
+      ],
       "records": [
-        {"id": "rast", "name_ar": "راست", "name_en": "Rast", "emoji": "🌿", "primary_color": "#22c55e", "secondary_color": "#d4af37", "accent_color": "#4ade80", "symbolism": "البداية، الأصل، الأرض"},
-        {"id": "bayati", "name_ar": "بياتي", "name_en": "Bayati", "emoji": "💙", "primary_color": "#3b82f6", "secondary_color": "#c0c0c0", "accent_color": "#60a5fa", "symbolism": "الحنين، الذكرى، الشوق"},
-        {"id": "hijaz", "name_ar": "حجاز", "name_en": "Hijaz", "emoji": "🔥", "primary_color": "#dc2626", "secondary_color": "#fbbf24", "accent_color": "#f97316", "symbolism": "الشغف، الصراع، النار"},
-        {"id": "saba", "name_ar": "صبا", "name_en": "Saba", "emoji": "🌙", "primary_color": "#a855f7", "secondary_color": "#5eead4", "accent_color": "#c4b5fd", "symbolism": "الأسى، الفقد، الحزن العميق"},
-        {"id": "nahawand", "name_ar": "نهاوند", "name_en": "Nahawand", "emoji": "⚓", "primary_color": "#2563eb", "secondary_color": "#f59e0b", "accent_color": "#fbbf24", "symbolism": "الوقار، الحكمة، الثبات"},
-        {"id": "ajam", "name_ar": "عجم", "name_en": "Ajam", "emoji": "☀️", "primary_color": "#ea580c", "secondary_color": "#fef3c7", "accent_color": "#fb923c", "symbolism": "البهجة، الاحتفال، الفرح"},
-        {"id": "kurd", "name_ar": "كرد", "name_en": "Kurd", "emoji": "🗿", "primary_color": "#14b8a6", "secondary_color": "#b45309", "accent_color": "#2dd4bf", "symbolism": "الغموض، القدم، ما قبل الذاكرة"}
+        {
+          "id": "rast",
+          "name_ar": "راست",
+          "name_en": "Rast",
+          "emoji": "🌿",
+          "primary_color": "#22c55e",
+          "secondary_color": "#d4af37",
+          "accent_color": "#4ade80",
+          "symbolism": [
+            "البداية",
+            "الأصل",
+            "الأرض"
+          ],
+          "verification_status": "project_defined"
+        },
+        {
+          "id": "bayati",
+          "name_ar": "بياتي",
+          "name_en": "Bayati",
+          "emoji": "💙",
+          "primary_color": "#3b82f6",
+          "secondary_color": "#c0c0c0",
+          "accent_color": "#60a5fa",
+          "symbolism": [
+            "الحنين",
+            "الذكرى",
+            "الشوق"
+          ],
+          "verification_status": "project_defined"
+        },
+        {
+          "id": "hijaz",
+          "name_ar": "حجاز",
+          "name_en": "Hijaz",
+          "emoji": "🔥",
+          "primary_color": "#dc2626",
+          "secondary_color": "#fbbf24",
+          "accent_color": "#f97316",
+          "symbolism": [
+            "الشغف",
+            "الصراع",
+            "النار"
+          ],
+          "verification_status": "project_defined"
+        },
+        {
+          "id": "saba",
+          "name_ar": "صبا",
+          "name_en": "Saba",
+          "emoji": "🌙",
+          "primary_color": "#a855f7",
+          "secondary_color": "#5eead4",
+          "accent_color": "#c4b5fd",
+          "symbolism": [
+            "الأسى",
+            "الفقد",
+            "الحزن العميق"
+          ],
+          "verification_status": "project_defined"
+        },
+        {
+          "id": "nahawand",
+          "name_ar": "نهاوند",
+          "name_en": "Nahawand",
+          "emoji": "⚓",
+          "primary_color": "#2563eb",
+          "secondary_color": "#f59e0b",
+          "accent_color": "#fbbf24",
+          "symbolism": [
+            "الوقار",
+            "الحكمة",
+            "الثبات"
+          ],
+          "verification_status": "project_defined"
+        },
+        {
+          "id": "ajam",
+          "name_ar": "عجم",
+          "name_en": "Ajam",
+          "emoji": "☀️",
+          "primary_color": "#ea5800",
+          "secondary_color": "#fef3c7",
+          "accent_color": "#fb923c",
+          "symbolism": [
+            "البهجة",
+            "الاحتفال",
+            "الفرح"
+          ],
+          "verification_status": "project_defined"
+        },
+        {
+          "id": "kurd",
+          "name_ar": "كرد",
+          "name_en": "Kurd",
+          "emoji": "🗿",
+          "primary_color": "#14b8a6",
+          "secondary_color": "#b45309",
+          "accent_color": "#2dd4bf",
+          "symbolism": [
+            "الغموض",
+            "القدم",
+            "ما قبل الذاكرة"
+          ],
+          "verification_status": "project_defined"
+        }
       ]
     },
-
     "seeds_reference": {
       "name": "مرجع البذرات المستخدمة في MaqamAI",
-      "name_en": "MaqamAI Seeds Reference",
-      "description": "قائمة البذرات (Seeds) المستخدمة في فيديوهات MaqamAI المنشورة، مع المقام المرتبط بكل بذرة. البذرة رقم بين 0 و999999 يُنتج توزيعاً بصرياً حتمياً.",
-      "type": "METRIC",
-      "confidence": "high",
-      "fields": ["seed", "maqam_id", "used_in", "video_id", "date_published"],
+      "description": "سجل للبذرات الرقمية المرتبطة بإنتاج أو اختبار بعض مخرجات MaqamAI. البذرة قيمة إعداد يمكن استخدامها في سياق إعادة الإنتاج الحتمي إذا كانت آلية التوليد والبرمجيات وإعداداتها ثابتة. لا تعني البذرة وحدها ضمان تطابق النتائج عبر جميع البيئات أو الإصدارات.",
+      "data_category": "CONFIGURATION_DATA",
+      "claim_type": "PROJECT_CONFIGURATION",
+      "fields": [
+        "seed",
+        "maqam_id",
+        "used_in",
+        "video_id",
+        "date_published",
+        "record_type",
+        "verification_status"
+      ],
       "records": [
-        {"seed": 42, "maqam_id": "hijaz", "used_in": "عندما ينطق المندول بلغة المستقبل", "video_id": "35PJTcf4akM", "date_published": "2026-11-19"},
-        {"seed": 911978, "maqam_id": "saba", "used_in": "صبا — ما فقدناه لا يعود، لكنه يبقى في الصوت", "video_id": "afZS_Mb6NZY", "date_published": "2026-11-19"},
-        {"seed": 162555, "maqam_id": null, "used_in": "اختبار مرجعي", "video_id": null, "date_published": null},
-        {"seed": 302907, "maqam_id": null, "used_in": "اختبار مرجعي", "video_id": null, "date_published": null},
-        {"seed": 800114, "maqam_id": null, "used_in": "اختبار مرجعي", "video_id": null, "date_published": null}
+        {
+          "seed": 42,
+          "maqam_id": "hijaz",
+          "used_in": "عندما ينطق المندول بلغة المستقبل",
+          "video_id": "35PJTcf4akM",
+          "date_published": "2026-11-19",
+          "record_type": "published_video_seed",
+          "verification_status": "pending_external_check"
+        },
+        {
+          "seed": 911978,
+          "maqam_id": "saba",
+          "used_in": "صبا — ما فقدناه لا يعود، لكنه يبقى في الصوت",
+          "video_id": "afZS_Mb6NZY",
+          "date_published": "2026-11-19",
+          "record_type": "published_video_seed",
+          "verification_status": "pending_external_check"
+        },
+        {
+          "seed": 162555,
+          "maqam_id": null,
+          "used_in": "اختبار مرجعي",
+          "video_id": null,
+          "date_published": null,
+          "record_type": "test_record",
+          "verification_status": "test_record"
+        },
+        {
+          "seed": 302907,
+          "maqam_id": null,
+          "used_in": "اختبار مرجعي",
+          "video_id": null,
+          "date_published": null,
+          "record_type": "test_record",
+          "verification_status": "test_record"
+        },
+        {
+          "seed": 800114,
+          "maqam_id": null,
+          "used_in": "اختبار مرجعي",
+          "video_id": null,
+          "date_published": null,
+          "record_type": "test_record",
+          "verification_status": "test_record"
+        }
       ]
     },
-
     "videos_index": {
-      "name": "فهرس فيديوهات قناة MaqamAI",
-      "name_en": "MaqamAI YouTube Videos Index",
-      "description": "فهرس الفيديوهات المنشورة على قناة MaqamAI على يوتيوب، مع روابطها وتواريخ نشرها ومدتها ومقاماتها. يشمل الفيديوهات العامة والخاصة.",
-      "type": "FACT",
-      "confidence": "high",
+      "name": "فهرس فيديوهات MaqamAI",
+      "description": "فهرس لمقاطع فيديو مرتبطة بمشروع MaqamAI، ويشمل مقاطع متاحة للعامة وسجلات تاريخية لمقاطع سبق نشرها ثم حُذفت. لا يعني وجود سجل في هذا الفهرس أن الفيديو متاح حالياً للمشاهدة.",
+      "data_category": "CATALOG_DATA",
+      "claim_type": "PROJECT_CATALOG",
       "source": "https://www.youtube.com/@MaqamAI",
-      "fields": ["id", "title_ar", "youtube_url", "video_id", "duration_seconds", "format", "maqam_id", "seed", "date_published", "status"],
+      "fields": [
+        "id",
+        "title_ar",
+        "youtube_url",
+        "video_id",
+        "duration_seconds",
+        "format",
+        "maqam_id",
+        "seed",
+        "date_published",
+        "status",
+        "verification_status",
+        "notes"
+      ],
       "records": [
         {
           "id": "v001",
@@ -74,7 +254,9 @@
           "maqam_id": null,
           "seed": null,
           "date_published": "2026-11-16",
-          "status": "public"
+          "status": "public",
+          "verification_status": "pending_external_check",
+          "notes": null
         },
         {
           "id": "v002",
@@ -86,7 +268,9 @@
           "maqam_id": null,
           "seed": null,
           "date_published": "2026-11-17",
-          "status": "public"
+          "status": "public",
+          "verification_status": "pending_external_check",
+          "notes": null
         },
         {
           "id": "v003",
@@ -98,7 +282,9 @@
           "maqam_id": "hijaz",
           "seed": 42,
           "date_published": "2026-11-19",
-          "status": "public"
+          "status": "public",
+          "verification_status": "pending_external_check",
+          "notes": null
         },
         {
           "id": "v004",
@@ -110,7 +296,9 @@
           "maqam_id": "saba",
           "seed": 911978,
           "date_published": "2026-11-19",
-          "status": "public"
+          "status": "public",
+          "verification_status": "pending_external_check",
+          "notes": null
         },
         {
           "id": "v005",
@@ -122,43 +310,78 @@
           "maqam_id": null,
           "seed": null,
           "date_published": "2026-11-18",
-          "status": "private_hidden",
-          "note": "تم إخفاؤه لضعف الاحتفاظ (6.4%). محفوظ للمراجعة المستقبلية."
+          "status": "deleted",
+          "verification_status": "historical_deleted",
+          "notes": "كان الفيديو منشوراً سابقاً بتاريخ 2026-11-18، ثم حُذف بسبب مشكلة. احتُفظ بهذا السجل لأغراض التوثيق التاريخي. لا يتوفر رابط عام صالح حالياً."
         }
       ]
     },
-
     "pages_index": {
-      "name": "فهرس صفحات مدونة نبض الجزائر",
-      "name_en": "Nabdz Algeria Blog Pages Index",
-      "description": "فهرس الصفحات الثابتة المنشورة على مدونة نبض الجزائر، مع روابطها ووظائفها.",
-      "type": "FACT",
-      "confidence": "high",
-      "source": "https://nabdz-algeria.blogspot.com",
-      "fields": ["id", "title_ar", "url", "type", "description"],
+      "name": "فهرس صفحات مختارة من نبض الجزائر",
+      "description": "فهرس لصفحات مختارة من موقع نبض الجزائر، يتضمن صفحات وأدوات مرتبطة بمشروع MaqamAI والبيانات المفتوحة. لا يمثل هذا الفهرس جميع صفحات الموقع.",
+      "data_category": "CATALOG_DATA",
+      "claim_type": "PROJECT_CATALOG",
+      "source": "https://nabdz-algeria.blogspot.com/",
+      "fields": [
+        "id",
+        "title_ar",
+        "url",
+        "type",
+        "description",
+        "verification_status"
+      ],
       "records": [
         {
           "id": "p001",
-          "title_ar": "استوديو MaqamAI — محرك الفن السيادي",
+          "title_ar": "استوديو MaqamAI",
           "url": "https://nabdz-algeria.blogspot.com/p/maqamai-engine.html",
           "type": "tool",
-          "description": "أداة ويب لتحويل الصور والصوت إلى فيديو فني. معالجة محلية 100%، بدون AI."
+          "description": "أداة ويب لتحويل الصور والصوت إلى فيديو فني. يصف المشروع المعالجة بأنها محلية، لكن هذا الوصف يحتاج إلى مراجعة تقنية مستقلة للكود قبل اعتماده كحقيقة مؤكدة.",
+          "verification_status": "pending_external_check"
         },
         {
           "id": "p002",
-          "title_ar": "خارطة البيانات المفتوحة",
+          "title_ar": "البيانات المفتوحة",
           "url": "https://nabdz-algeria.blogspot.com/p/open-data.html",
           "type": "data_hub",
-          "description": "وثيقة منهجية لمصادر البيانات المفتوحة والمنهجية."
+          "description": "صفحة تعريفية تعرض مجموعة البيانات المفتوحة ومصادرها وبنية التوثيق والمنهجية المعتمدة في المشروع.",
+          "verification_status": "pending_external_check"
         }
       ]
     }
   },
-
   "notes": {
-    "verification": "جميع البيانات في هذه المجموعة قابلة للتحقق. الحقول الفارغة (null) تعني أن المعلومة غير متوفرة بعد أو قيد التوثيق.",
-    "update_policy": "تُحدَّث هذه المجموعة شهرياً أو عند نشر فيديو/صفحة جديدة. تاريخ آخر تحديث مسجل في metadata.last_updated.",
-    "known_limitations": "الفيديو v005 مخفي حالياً لأسباب تحليلية. سيُعاد تقييمه لاحقاً.",
-    "seed_note": "البذرات 162555 و302907 و800114 استُخدمت في اختبارات مرجعية قبل النشر العلني، ولا ترتبط بفيديو محدد."
+    "methodology": [
+      "يجب التمييز بين البيانات المرجعية التي يحددها المشروع، وبيانات الإعداد، والفهارس التي تصف محتوى منشوراً أو تاريخياً.",
+      "لا يُعد وجود سجل في ملف JSON دليلاً تلقائياً على صحته أو على إمكانية التحقق منه من مصدر مستقل.",
+      "تُستخدم حالة التحقق لتوضيح مستوى الإثبات المتاح لكل سجل.",
+      "القيم null تعني أن المعلومة غير متاحة أو غير موثقة في السجل الحالي، ولا يجوز استبدالها بقيم تخمينية.",
+      "يجب عدم الخلط بين السجلات التجريبية والسجلات المرتبطة بمخرجات منشورة.",
+      "الألوان والرموز والدلالات التعبيرية في مرجع المقامات اختيارات تصميمية داخل MaqamAI وليست حقائق موسيقية عامة."
+    ],
+    "known_limitations": [
+      "بعض السجلات لم تخضع بعد للتحقق المستقل من مصادر خارجية.",
+      "السجل v005 يوثق فيديو محذوفاً، ولا يمثل محتوى متاحاً حالياً للجمهور.",
+      "فهرس الصفحات يتضمن صفحات مختارة فقط ولا يمثل كامل الموقع.",
+      "لا يثبت وجود البذرة الرقمية وحده إمكانية إعادة إنتاج نتيجة مطابقة دون توثيق إصدار البرنامج وإعداداته وبيئة التشغيل.",
+      "وصف المعالجة المحلية في صفحة MaqamAI يحتاج إلى فحص تقني مستقل قبل تقديمه كادعاء مؤكد."
+    ],
+    "update_policy": {
+      "recommended_frequency": "monthly",
+      "additional_update_triggers": [
+        "نشر فيديو جديد",
+        "حذف فيديو أو تغيير حالته",
+        "إضافة صفحة أو أداة جديدة",
+        "تغيير بنية البيانات",
+        "تصحيح سجل سابق"
+      ],
+      "versioning_policy": "تُحفظ الإصدارات السابقة، وتُستخدم الإصدارات التصحيحية لتعديل الأخطاء دون محو تاريخ النشر السابق."
+    },
+    "historical_records": {
+      "v005": "سجل تاريخي لفيديو منشور سابقاً ثم محذوف. لا يُعاد تصنيفه على أنه فيديو خاص أو مخفي."
+    },
+    "seed_note": "البذرات 162555 و302907 و800114 سُجلت بوصفها بذرات اختبار مرجعي سابقة، ولا ترتبط في البيانات الحالية بفيديو منشور محدد.",
+    "license_note": "ينطبق ترخيص CC BY 4.0 على المواد التي يملك المشروع حق ترخيصها فقط. لا يشمل تلقائياً حقوق أطراف ثالثة أو محتوى YouTube أو المواد التي لا يملك المشروع حقوقها.",
+    "release_note": "الإصدار 1.0.1 إصدار تصحيحي مقترح يحافظ على بيانات الإصدار الأول ويُحسن التصنيف والتوثيق. ينبغي نشره في المستودع بعد مراجعة الملف واختباره."
   }
 }
