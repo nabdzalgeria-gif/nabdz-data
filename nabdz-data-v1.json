@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "title": "نبض الجزائر — البيانات المفتوحة (الإصدار 1.0)",
+    "title_en": "Nabdz Algeria — Open Data (v1.0)",
+    "source": "https://nabdz-algeria.blogspot.com",
+    "version": "1.0.0",
+    "release_date": "2026-11-19",
+    "last_updated": "2026-11-19",
+    "status": "published",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "creator": {
+      "name": "علية حاتم",
+      "organization": "نبض الجزائر",
+      "email": "all09sajida@gmail.com"
+    },
+    "language": "ar",
+    "description": "مجموعة بيانات مفتوحة تحتوي على مرجع المقامات السبعة في MaqamAI، وفهرس البذرات المرجعية، وفهرس الفيديوهات المنشورة على قناة MaqamAI، وفهرس صفحات مدونة نبض الجزائر. جميع البيانات قابلة للتحقق ومصدرها الأساسي هو مدونة نبض الجزائر وقناة MaqamAI على يوتيوب.",
+    "citation": "@misc{nabdz2026data, author={علية حاتم}, title={نبض الجزائر — البيانات المفتوحة}, year={2026}, version={1.0.0}, url={https://nabdz-algeria.blogspot.com/p/open-data.html}}"
+  },
+
+  "datasets": {
+
+    "maqamat_reference": {
+      "name": "مرجع المقامات السبعة في MaqamAI",
+      "name_en": "MaqamAI Seven Maqamat Reference",
+      "description": "جدول مرجعي يصف المقامات السبعة المستخدمة في أداة MaqamAI، مع الألوان (أكواد HEX) والدلالة الرمزية لكل مقام. هذا الجدول فريد ولا يوجد في أي مصدر آخر.",
+      "type": "FACT",
+      "confidence": "high",
+      "fields": ["id", "name_ar", "name_en", "emoji", "primary_color", "secondary_color", "accent_color", "symbolism"],
+      "records": [
+        {"id": "rast", "name_ar": "راست", "name_en": "Rast", "emoji": "🌿", "primary_color": "#22c55e", "secondary_color": "#d4af37", "accent_color": "#4ade80", "symbolism": "البداية، الأصل، الأرض"},
+        {"id": "bayati", "name_ar": "بياتي", "name_en": "Bayati", "emoji": "💙", "primary_color": "#3b82f6", "secondary_color": "#c0c0c0", "accent_color": "#60a5fa", "symbolism": "الحنين، الذكرى، الشوق"},
+        {"id": "hijaz", "name_ar": "حجاز", "name_en": "Hijaz", "emoji": "🔥", "primary_color": "#dc2626", "secondary_color": "#fbbf24", "accent_color": "#f97316", "symbolism": "الشغف، الصراع، النار"},
+        {"id": "saba", "name_ar": "صبا", "name_en": "Saba", "emoji": "🌙", "primary_color": "#a855f7", "secondary_color": "#5eead4", "accent_color": "#c4b5fd", "symbolism": "الأسى، الفقد، الحزن العميق"},
+        {"id": "nahawand", "name_ar": "نهاوند", "name_en": "Nahawand", "emoji": "⚓", "primary_color": "#2563eb", "secondary_color": "#f59e0b", "accent_color": "#fbbf24", "symbolism": "الوقار، الحكمة، الثبات"},
+        {"id": "ajam", "name_ar": "عجم", "name_en": "Ajam", "emoji": "☀️", "primary_color": "#ea580c", "secondary_color": "#fef3c7", "accent_color": "#fb923c", "symbolism": "البهجة، الاحتفال، الفرح"},
+        {"id": "kurd", "name_ar": "كرد", "name_en": "Kurd", "emoji": "🗿", "primary_color": "#14b8a6", "secondary_color": "#b45309", "accent_color": "#2dd4bf", "symbolism": "الغموض، القدم، ما قبل الذاكرة"}
+      ]
+    },
+
+    "seeds_reference": {
+      "name": "مرجع البذرات المستخدمة في MaqamAI",
+      "name_en": "MaqamAI Seeds Reference",
+      "description": "قائمة البذرات (Seeds) المستخدمة في فيديوهات MaqamAI المنشورة، مع المقام المرتبط بكل بذرة. البذرة رقم بين 0 و999999 يُنتج توزيعاً بصرياً حتمياً.",
+      "type": "METRIC",
+      "confidence": "high",
+      "fields": ["seed", "maqam_id", "used_in", "video_id", "date_published"],
+      "records": [
+        {"seed": 42, "maqam_id": "hijaz", "used_in": "عندما ينطق المندول بلغة المستقبل", "video_id": "35PJTcf4akM", "date_published": "2026-11-19"},
+        {"seed": 911978, "maqam_id": "saba", "used_in": "صبا — ما فقدناه لا يعود، لكنه يبقى في الصوت", "video_id": "afZS_Mb6NZY", "date_published": "2026-11-19"},
+        {"seed": 162555, "maqam_id": null, "used_in": "اختبار مرجعي", "video_id": null, "date_published": null},
+        {"seed": 302907, "maqam_id": null, "used_in": "اختبار مرجعي", "video_id": null, "date_published": null},
+        {"seed": 800114, "maqam_id": null, "used_in": "اختبار مرجعي", "video_id": null, "date_published": null}
+      ]
+    },
+
+    "videos_index": {
+      "name": "فهرس فيديوهات قناة MaqamAI",
+      "name_en": "MaqamAI YouTube Videos Index",
+      "description": "فهرس الفيديوهات المنشورة على قناة MaqamAI على يوتيوب، مع روابطها وتواريخ نشرها ومدتها ومقاماتها. يشمل الفيديوهات العامة والخاصة.",
+      "type": "FACT",
+      "confidence": "high",
+      "source": "https://www.youtube.com/@MaqamAI",
+      "fields": ["id", "title_ar", "youtube_url", "video_id", "duration_seconds", "format", "maqam_id", "seed", "date_published", "status"],
+      "records": [
+        {
+          "id": "v001",
+          "title_ar": "موسيقى جزائرية كما لم تسمعها من قبل",
+          "youtube_url": "https://youtu.be/haKtvM4I3mY",
+          "video_id": "haKtvM4I3mY",
+          "duration_seconds": 178,
+          "format": "landscape_16_9",
+          "maqam_id": null,
+          "seed": null,
+          "date_published": "2026-11-16",
+          "status": "public"
+        },
+        {
+          "id": "v002",
+          "title_ar": "Maqam of the Clockwork",
+          "youtube_url": "https://youtube.com/shorts/Iz_PCPqK-HA",
+          "video_id": "Iz_PCPqK-HA",
+          "duration_seconds": 60,
+          "format": "shorts_9_16",
+          "maqam_id": null,
+          "seed": null,
+          "date_published": "2026-11-17",
+          "status": "public"
+        },
+        {
+          "id": "v003",
+          "title_ar": "عندما ينطق المندول بلغة المستقبل ⚡ MaqamAI",
+          "youtube_url": "https://youtu.be/35PJTcf4akM",
+          "video_id": "35PJTcf4akM",
+          "duration_seconds": 62,
+          "format": "landscape_16_9",
+          "maqam_id": "hijaz",
+          "seed": 42,
+          "date_published": "2026-11-19",
+          "status": "public"
+        },
+        {
+          "id": "v004",
+          "title_ar": "صبا — ما فقدناه لا يعود، لكنه يبقى في الصوت 🌙",
+          "youtube_url": "https://youtube.com/shorts/afZS_Mb6NZY",
+          "video_id": "afZS_Mb6NZY",
+          "duration_seconds": 62,
+          "format": "shorts_9_16",
+          "maqam_id": "saba",
+          "seed": 911978,
+          "date_published": "2026-11-19",
+          "status": "public"
+        },
+        {
+          "id": "v005",
+          "title_ar": "Maqam of the Clockwork | حوار الآلة والخوارزمية",
+          "youtube_url": null,
+          "video_id": null,
+          "duration_seconds": 180,
+          "format": "landscape_16_9",
+          "maqam_id": null,
+          "seed": null,
+          "date_published": "2026-11-18",
+          "status": "private_hidden",
+          "note": "تم إخفاؤه لضعف الاحتفاظ (6.4%). محفوظ للمراجعة المستقبلية."
+        }
+      ]
+    },
+
+    "pages_index": {
+      "name": "فهرس صفحات مدونة نبض الجزائر",
+      "name_en": "Nabdz Algeria Blog Pages Index",
+      "description": "فهرس الصفحات الثابتة المنشورة على مدونة نبض الجزائر، مع روابطها ووظائفها.",
+      "type": "FACT",
+      "confidence": "high",
+      "source": "https://nabdz-algeria.blogspot.com",
+      "fields": ["id", "title_ar", "url", "type", "description"],
+      "records": [
+        {
+          "id": "p001",
+          "title_ar": "استوديو MaqamAI — محرك الفن السيادي",
+          "url": "https://nabdz-algeria.blogspot.com/p/maqamai-engine.html",
+          "type": "tool",
+          "description": "أداة ويب لتحويل الصور والصوت إلى فيديو فني. معالجة محلية 100%، بدون AI."
+        },
+        {
+          "id": "p002",
+          "title_ar": "خارطة البيانات المفتوحة",
+          "url": "https://nabdz-algeria.blogspot.com/p/open-data.html",
+          "type": "data_hub",
+          "description": "وثيقة منهجية لمصادر البيانات المفتوحة والمنهجية."
+        }
+      ]
+    }
+  },
+
+  "notes": {
+    "verification": "جميع البيانات في هذه المجموعة قابلة للتحقق. الحقول الفارغة (null) تعني أن المعلومة غير متوفرة بعد أو قيد التوثيق.",
+    "update_policy": "تُحدَّث هذه المجموعة شهرياً أو عند نشر فيديو/صفحة جديدة. تاريخ آخر تحديث مسجل في metadata.last_updated.",
+    "known_limitations": "الفيديو v005 مخفي حالياً لأسباب تحليلية. سيُعاد تقييمه لاحقاً.",
+    "seed_note": "البذرات 162555 و302907 و800114 استُخدمت في اختبارات مرجعية قبل النشر العلني، ولا ترتبط بفيديو محدد."
+  }
+}
